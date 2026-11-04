@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Author: Group Member (Engineer) | Date: November 4, 2026 | Page 3: About Us & Contact -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AEK Electric Auto Repairs provides dependable electric and hybrid vehicle maintenance and repair services.">
+    <title>About Us & Contact | AEK Electric Auto Repairs</title>
+    <style>
+
+:root {
+    --bg: #0a0d14;
+    --surface: #121824;
+    --surface-light: #182334;
+    --cyan: #00e5f2;
+    --blue: #4facfe;
+    --text: #e6edf3;
+    --muted: #a5b1bf;
+    --border: rgba(0, 229, 242, .20);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(18, 24, 36, .96);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+.nav-wrap {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.logo {
+    color: var(--cyan);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    list-style: none;
+}
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .2s ease;
+}
+nav a:hover, nav a[aria-current="page"] { color: var(--cyan); }
+.hero {
+    min-height: 390px;
+    padding: 85px 24px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background:
+      linear-gradient(rgba(5, 12, 22, .78), rgba(5, 12, 22, .88)),
+      url("https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover;
+}
+.hero-content { max-width: 850px; }
+.eyebrow {
+    color: var(--cyan);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .85rem;
+}
+h1 {
+    margin: 12px 0;
+    font-size: clamp(2.3rem, 6vw, 4rem);
+    line-height: 1.12;
+    background: linear-gradient(135deg, var(--cyan), var(--blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+h2 {
+    color: var(--cyan);
+    font-size: clamp(1.65rem, 3vw, 2.2rem);
+    margin-bottom: 16px;
+    text-align: center;
+}
+h3 { color: var(--text); margin-bottom: 9px; }
+p { color: var(--muted); margin-bottom: 14px; }
+main { max-width: 1150px; margin: auto; padding: 54px 24px; }
+section { margin-bottom: 64px; }
+.section-intro {
+    max-width: 780px;
+    text-align: center;
+    margin: 0 auto 30px;
+}
+.button {
+    display: inline-block;
+    margin: 12px 8px 0;
+    padding: 12px 23px;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--cyan), var(--blue));
+    color: #06111b;
+    text-decoration: none;
+    font-weight: 800;
+    transition: transform .2s ease, filter .2s ease;
+}
+.button:hover { transform: translateY(-2px); filter: brightness(1.08); }
+.button.secondary {
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--cyan);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+.card {
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 13px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.18);
+}
+.card img {
+    display: block;
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+.card-content { padding: 23px; }
+.card-content p:last-child { margin-bottom: 0; }
+.panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+}
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: center;
+}
+.feature-image {
+    width: 100%;
+    max-height: 390px;
+    object-fit: cover;
+    border-radius: 13px;
+    border: 1px solid var(--border);
+}
+.price { color: var(--cyan); font-size: 1.25rem; font-weight: 800; }
+.steps .card { padding: 24px; text-align: center; }
+.step-number {
+    display: inline-grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    background: var(--cyan);
+    color: #06111b;
+    font-weight: 900;
+}
+.promo {
+    padding: 42px 24px;
+    text-align: center;
+    background: linear-gradient(135deg, #101e30, #163e65);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+.promo-code {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 24px;
+    color: var(--cyan);
+    border: 1px dashed var(--cyan);
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+.team-card { padding: 26px; text-align: center; }
+.role { color: var(--blue); font-weight: 700; }
+.contact-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 25px;
+}
+.contact-details p { margin-bottom: 12px; }
+form label { display: block; margin: 12px 0 6px; color: var(--text); }
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 7px;
+    font: inherit;
+}
+form input:focus, form textarea:focus { outline: 2px solid var(--cyan); }
+form button {
+    margin-top: 16px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--cyan), var(--blue));
+    color: #06111b;
+    font-weight: 800;
+    cursor: pointer;
+}
+footer {
+    padding: 28px 20px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+}
+footer p { margin: 5px 0; font-size: .9rem; }
+@media (max-width: 800px) {
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .split, .contact-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+    .nav-wrap { flex-direction: column; }
+    nav ul { justify-content: center; gap: 12px 18px; }
+    .grid { grid-template-columns: 1fr; }
+    main { padding: 38px 17px; }
+    .hero { min-height: 330px; padding: 65px 18px; }
+    .panel { padding: 22px; }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-wrap">
+            <a class="logo" href="index.html">AEK ELECTRIC AUTO REPAIRS</a>
+            <nav aria-label="Main navigation">
+                <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="page2.html">Products & Services</a></li>
+<li><a href="page3.html" aria-current="page">About Us & Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Get to Know Our Shop</p>
+            <h1>About AEK Electric</h1>
+            <p>Meet the people and purpose behind AEK Electric Auto Repairs.</p>
+            <a class="button" href="#contact">Contact Our Team</a>
+        </div>
+    </section>
+    <main>
+        <section>
+            <h2>Our Origin Story</h2>
+            <div class="split">
+                <img class="feature-image" src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Modern electric vehicle service workshop" loading="lazy">
+                <div>
+                    <p>Founded inside a university robotics lab, three students got tired of traditional auto shops refusing to work on custom electric drivetrains. With a shared interest in technology and automotive innovation, AEK Electric Auto Repairs was created to provide service options for the next generation of electric vehicles.</p>
+                    <p>Today, our fictional business represents a team focused on dependable service, modern technology, and helping EV owners feel confident about vehicle maintenance.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Meet the Founders</h2>
+            <div class="grid">
+                <article class="card team-card"><h3>Axel</h3><p class="role">Electrical Engineer</p><p>Specializing in custom high-voltage circuitry, battery diagnostics, and motor tuning.</p></article>
+                <article class="card team-card"><h3>Chino</h3><p class="role">IT Specialist</p><p>Managing shop diagnostics software, cloud networks, and digital infrastructure.</p></article>
+                <article class="card team-card"><h3>Kayden</h3><p class="role">Finance</p><p>Overseeing budgeting, parts procurement, and sustainable growth strategy for the shop.</p></article>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p class="section-intro">Have a question or want to learn more about our services? Send our team a message.</p>
+            <div class="contact-grid">
+                <div class="panel contact-details">
+                    <h3>Storefront &amp; Details</h3>
+                    <p><strong>Location:</strong> Engineering Quad, Building 4 - Room 102</p>
+                    <p><strong>Phone:</strong> (555) 38-AEK-EV</p>
+                    <p><strong>Email:</strong> service@aekelectric.edu</p>
+                    <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 6:00 PM</p>
+                    <p><em>Note: This is fictional contact information for the class project.</em></p>
+                </div>
+                <div class="panel">
+                    <form action="mailto:service@aekelectric.edu" method="post" enctype="text/plain">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>AEK Electric Auto Repairs, LLC</strong></p>
+        <p>YOUR EV, OUR EXPERTISE</p>
+        <p>&copy; 2026 AEK Electric Auto Repairs, LLC. All rights reserved.</p>
+        <p>Website created for ITEC 101.</p>
+    </footer>
+</body>
+</html>

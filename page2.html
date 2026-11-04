@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Author: Kayden Shaughnessy | Date: November 4, 2026 | Page 2: Products & Services -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AEK Electric Auto Repairs provides dependable electric and hybrid vehicle maintenance and repair services.">
+    <title>Products & Services | AEK Electric Auto Repairs</title>
+    <style>
+
+:root {
+    --bg: #0a0d14;
+    --surface: #121824;
+    --surface-light: #182334;
+    --cyan: #00e5f2;
+    --blue: #4facfe;
+    --text: #e6edf3;
+    --muted: #a5b1bf;
+    --border: rgba(0, 229, 242, .20);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(18, 24, 36, .96);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+.nav-wrap {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.logo {
+    color: var(--cyan);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    list-style: none;
+}
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .2s ease;
+}
+nav a:hover, nav a[aria-current="page"] { color: var(--cyan); }
+.hero {
+    min-height: 390px;
+    padding: 85px 24px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background:
+      linear-gradient(rgba(5, 12, 22, .78), rgba(5, 12, 22, .88)),
+      url("https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover;
+}
+.hero-content { max-width: 850px; }
+.eyebrow {
+    color: var(--cyan);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .85rem;
+}
+h1 {
+    margin: 12px 0;
+    font-size: clamp(2.3rem, 6vw, 4rem);
+    line-height: 1.12;
+    background: linear-gradient(135deg, var(--cyan), var(--blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+h2 {
+    color: var(--cyan);
+    font-size: clamp(1.65rem, 3vw, 2.2rem);
+    margin-bottom: 16px;
+    text-align: center;
+}
+h3 { color: var(--text); margin-bottom: 9px; }
+p { color: var(--muted); margin-bottom: 14px; }
+main { max-width: 1150px; margin: auto; padding: 54px 24px; }
+section { margin-bottom: 64px; }
+.section-intro {
+    max-width: 780px;
+    text-align: center;
+    margin: 0 auto 30px;
+}
+.button {
+    display: inline-block;
+    margin: 12px 8px 0;
+    padding: 12px 23px;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--cyan), var(--blue));
+    color: #06111b;
+    text-decoration: none;
+    font-weight: 800;
+    transition: transform .2s ease, filter .2s ease;
+}
+.button:hover { transform: translateY(-2px); filter: brightness(1.08); }
+.button.secondary {
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--cyan);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+.card {
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 13px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.18);
+}
+.card img {
+    display: block;
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+.card-content { padding: 23px; }
+.card-content p:last-child { margin-bottom: 0; }
+.panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+}
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: center;
+}
+.feature-image {
+    width: 100%;
+    max-height: 390px;
+    object-fit: cover;
+    border-radius: 13px;
+    border: 1px solid var(--border);
+}
+.price { color: var(--cyan); font-size: 1.25rem; font-weight: 800; }
+.steps .card { padding: 24px; text-align: center; }
+.step-number {
+    display: inline-grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    background: var(--cyan);
+    color: #06111b;
+    font-weight: 900;
+}
+.promo {
+    padding: 42px 24px;
+    text-align: center;
+    background: linear-gradient(135deg, #101e30, #163e65);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+.promo-code {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 24px;
+    color: var(--cyan);
+    border: 1px dashed var(--cyan);
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+.team-card { padding: 26px; text-align: center; }
+.role { color: var(--blue); font-weight: 700; }
+.contact-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 25px;
+}
+.contact-details p { margin-bottom: 12px; }
+form label { display: block; margin: 12px 0 6px; color: var(--text); }
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 7px;
+    font: inherit;
+}
+form input:focus, form textarea:focus { outline: 2px solid var(--cyan); }
+form button {
+    margin-top: 16px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--cyan), var(--blue));
+    color: #06111b;
+    font-weight: 800;
+    cursor: pointer;
+}
+footer {
+    padding: 28px 20px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+}
+footer p { margin: 5px 0; font-size: .9rem; }
+@media (max-width: 800px) {
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .split, .contact-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+    .nav-wrap { flex-direction: column; }
+    nav ul { justify-content: center; gap: 12px 18px; }
+    .grid { grid-template-columns: 1fr; }
+    main { padding: 38px 17px; }
+    .hero { min-height: 330px; padding: 65px 18px; }
+    .panel { padding: 22px; }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-wrap">
+            <a class="logo" href="index.html">AEK ELECTRIC AUTO REPAIRS</a>
+            <nav aria-label="Main navigation">
+                <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="page2.html" aria-current="page">Products & Services</a></li>
+<li><a href="page3.html">About Us & Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">AEK Electric Auto Repairs</p>
+            <h1>Products &amp; Services</h1>
+            <p>Practical EV maintenance and repair services designed to keep your vehicle performing at its best.</p>
+            <a class="button" href="#services">Explore Our Services</a>
+        </div>
+    </section>
+    <main>
+        <section id="services">
+            <h2>Our Products &amp; Services</h2>
+            <p class="section-intro">Whether your electric vehicle needs routine maintenance, battery diagnostics, or repairs, AEK Electric Auto Repairs is here to help with reliable service at affordable prices.</p>
+            <div class="grid">
+                <article class="card"><img src="https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mechanic inspecting a vehicle" loading="lazy"><div class="card-content"><h3>Battery Diagnostics</h3><p>We inspect your EV battery's health, performance, and condition to identify potential problems.</p><p class="price">$79</p></div></article>
+                <article class="card"><img src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Automotive technician working on a vehicle" loading="lazy"><div class="card-content"><h3>Electric Motor Inspection</h3><p>Our technicians inspect your electric motor and drive system to help maintain smooth performance.</p><p class="price">$129</p></div></article>
+                <article class="card"><img src="https://images.pexels.com/photos/6873088/pexels-photo-6873088.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Vehicle tire maintenance" loading="lazy"><div class="card-content"><h3>Tire Rotation</h3><p>Regular tire rotations help reduce uneven wear and extend tire life.</p><p class="price">$49</p></div></article>
+                <article class="card"><img src="https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mechanic performing automotive maintenance" loading="lazy"><div class="card-content"><h3>Brake Maintenance</h3><p>We inspect and maintain your vehicle's braking system for dependable stopping performance.</p><p class="price">$99</p></div></article>
+                <article class="card"><img src="https://images.pexels.com/photos/8985454/pexels-photo-8985454.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Technician inspecting automotive systems" loading="lazy"><div class="card-content"><h3>Cooling System Check</h3><p>We inspect cooling systems that help protect EV batteries and components from overheating.</p><p class="price">$89</p></div></article>
+                <article class="card"><img src="https://images.pexels.com/photos/12964124/pexels-photo-12964124.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Electric vehicle accessories" loading="lazy"><div class="card-content"><h3>EV Accessories</h3><p>Shop useful accessories such as charging cable organizers and vehicle care products.</p><p class="price">Starting at $19</p></div></article>
+            </div>
+        </section>
+        <section>
+            <h2>How It Works</h2>
+            <p class="section-intro">Getting your vehicle serviced at AEK Electric Auto Repairs is simple.</p>
+            <div class="grid steps">
+                <article class="card"><div class="step-number">1</div><h3>Schedule Your Visit</h3><p>Contact our shop by phone or email to schedule an appointment.</p></article>
+                <article class="card"><div class="step-number">2</div><h3>We Inspect Your EV</h3><p>Our technicians inspect your vehicle and explain recommended services.</p></article>
+                <article class="card"><div class="step-number">3</div><h3>Get Back on the Road</h3><p>After service is complete, you can get back to your day with confidence.</p></article>
+            </div>
+        </section>
+        <section class="promo">
+            <h2>New Customer Special!</h2>
+            <p>First time visiting AEK Electric Auto Repairs? Receive <strong>10% off</strong> your first service.</p>
+            <p>Use this promotional code:</p>
+            <div class="promo-code">AEK10</div>
+            <p style="margin-top:18px;">Quality EV service at an even better price.</p>
+        </section>
+        <section class="panel" style="text-align:center;">
+            <h2>Ready to Service Your EV?</h2>
+            <p>Contact us to ask a question or schedule your next service.</p>
+            <a class="button" href="page3.html">Contact Us Today</a>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>AEK Electric Auto Repairs, LLC</strong></p>
+        <p>YOUR EV, OUR EXPERTISE</p>
+        <p>&copy; 2026 AEK Electric Auto Repairs, LLC. All rights reserved.</p>
+        <p>Website created for ITEC 101.</p>
+    </footer>
+</body>
+</html>
